@@ -52,4 +52,7 @@ function ValidateForm() {
     } else {
         console.log(alert('Bem Vindo ao Portal!'))
     }
+
+
+    
 }
