@@ -26,8 +26,8 @@ const users = [
     }
 ];
 
-//const getEmail = el => el.email
-// console.log = users.map(getEmail)
+const getEmail = el => el.email
+console.log = users.map(getEmail)
 // const event = document.getElementById("email").innerHTML
 
 
@@ -40,23 +40,16 @@ function ValidateForm() {
         Plus: Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos.
     */
 
-    console.log(alert('Hello!'))
-    const usuario = document.querySelector('#email')
-    const senha = document.querySelector('#passwd')
+    // console.log(alert('Hello!'))
+    const usuario = document.getElementById("email").value
+    const senha = document.getElementById("passwd").value
     const pass = 127
 
-    
-    if (usuario.value == users.email && senha.value == pass) {
-        userValid = {
-            login: login.users,
-            email: email.users,
-            age: age.users
-        }
-    }
 
-    if (usuario.value == userValid.users && senha.value == pass) {
-        alert('Bem Vindo ao Portal!')
+    
+    if (getEmail != usuario.value && senha != pass) {
+        console.log(alert('Email e/ou senha estão errados. Verifique e tente novamente.'))     
     } else {
-        alert('Email e/ou senha estão errados. Verifique e tente novamente.')
+        console.log(alert('Bem Vindo ao Portal!'))
     }
 }
